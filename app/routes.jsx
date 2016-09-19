@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+
 import App from 'containers/App';
 import About from 'containers/About';
 import Dashboard from 'containers/Dashboard';
@@ -32,8 +33,8 @@ export default (store) => {
   };
   return (
     <Route path="/" component={App}>
-      <IndexRoute component={Dashboard} />
-      <Route path="dashboard" component={Dashboard}  />
+      <IndexRoute component={About} />
+      <Route path="dashboard" component={Dashboard} />
       <Route path="about" component={About} />
     </Route>
   );

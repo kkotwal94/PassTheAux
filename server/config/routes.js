@@ -7,7 +7,6 @@ import { controllers, passport as passportConfig } from '../db';
 
 const usersController = controllers && controllers.users;
 
-
 export default (app) => {
   // user routes
   if (usersController) {
@@ -42,4 +41,5 @@ export default (app) => {
       })
     );
   }
+
 };

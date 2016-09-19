@@ -10,7 +10,7 @@ import header from 'components/Meta';
 
 const clientConfig = {
   host: process.env.HOSTNAME || 'localhost',
-  port: process.env.PORT || '8080'
+  port: process.env.PORT || '3000'
 };
 
 // configure baseURL for axios requests (for serverside API calls)
@@ -126,6 +126,6 @@ export default function render(req, res) {
       });
     } else {
       res.sendStatus(404);
-    } 
+    }
   });
 }

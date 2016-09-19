@@ -2,7 +2,6 @@ import express from 'express';
 import webpack from 'webpack';
 import { ENV } from './config/appConfig';
 import { connect } from './db';
-import morgan from 'morgan';
 import passportConfig from './config/passport';
 import expressConfig from './config/express';
 import routesConfig from './config/routes';
@@ -32,6 +31,8 @@ if (ENV === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
+global.navigator = global.navigator || {};
+global.navigator.userAgent = global.navigator.userAgent || 'all';
 /*
  * Bootstrap application settings
  */
@@ -50,7 +51,6 @@ routesConfig(app);
  * App is a function that requires store data and url
  * to initialize and return the React-rendered html string
  */
- app.use(morgan('combined'))
 app.get('*', App.default);
 
 app.listen(app.get('port'));

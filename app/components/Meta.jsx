@@ -13,7 +13,7 @@ if (__DEVSERVER__) {
 const Meta = () => (
   <Helmet
     htmlAttributes={{"lang": "en", "amp": undefined}}
-    title="MobaRedux" meta={config.meta}
+    title="Moba Redux" meta={config.meta}
     link={config.link}
   />
 )
